@@ -23,3 +23,5 @@ interface IResponseError {
   code: string;
   message: string;
 }
+
+export { IArticle, IResponse, IResponseError };
