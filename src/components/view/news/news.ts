@@ -1,5 +1,5 @@
 import './news.css';
-import { IArticle, IResponse, IResponseError } from '../../../types/index';
+import { IArticle } from '../../../types/index';
 
 class News {
   draw(data: IArticle[]): void {

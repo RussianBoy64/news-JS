@@ -1,8 +1,5 @@
 interface IArticle {
-  source: {
-    id: string | null;
-    name: string | null;
-  };
+  source: IArticleSouce;
   author: string | null;
   title: string | null;
   description: string | null;
@@ -10,6 +7,11 @@ interface IArticle {
   urlToImage: string;
   publishedAt: string;
   content: string | null;
+}
+
+interface IArticleSouce {
+  id: string | null;
+  name: string | null;
 }
 
 interface IResponse {
@@ -24,4 +26,4 @@ interface IResponseError {
   message: string;
 }
 
-export { IArticle, IResponse, IResponseError };
+export { IArticle, IArticleSouce, IResponse, IResponseError };
