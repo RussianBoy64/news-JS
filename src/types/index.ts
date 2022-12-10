@@ -1,3 +1,5 @@
+// API data
+
 interface IArticle {
   source: IArticleSouce;
   author: string | null;
@@ -14,10 +16,24 @@ interface IArticleSouce {
   name: string | null;
 }
 
-interface IResponse {
+interface ISource {
+  category: string;
+  country: string;
+  description: string;
+  id: string;
+  language: string;
+  name: string;
+  url: string;
+}
+
+interface IResponseNews {
   status: string;
   totalResults: number;
   articles: IArticle[];
+}
+
+interface IResponseSources {
+  status: string;
 }
 
 interface IResponseError {
@@ -26,4 +42,4 @@ interface IResponseError {
   message: string;
 }
 
-export { IArticle, IArticleSouce, IResponse, IResponseError };
+export { IArticle, IArticleSouce, IResponseNews, IResponseError };
